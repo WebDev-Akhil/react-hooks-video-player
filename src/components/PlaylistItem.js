@@ -1,10 +1,13 @@
 import React from 'react';
+import StyledPlaylistItem from './styles/StyledPlaylistItem';
 
 
 const PlaylistItem = props => {
   return (
       <div>
-       playlistitem!!
+        <StyledPlaylistItem>
+        playlistitem!!
+        </StyledPlaylistItem>
       </div>
   )
 }
