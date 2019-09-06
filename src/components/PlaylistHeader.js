@@ -4,7 +4,7 @@ import StyledJourney from './styles/StyledJourney';
 
 
 
-const PlaylistHeader = ({active, totalt}) => (
+const PlaylistHeader = ({active, total}) => (
     <StyledPlaylistHeader>
         <p>{active.title}</p>
         <StyledJourney>
