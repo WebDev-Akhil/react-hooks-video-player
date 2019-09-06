@@ -5,15 +5,21 @@ import StyledPlaylistitems from '../styles/StyledPlaylistitems';
 
 
 
-const PlayListItems = props => {
-    return (
-        <div>
+const Playlistitems = ({ videos, active}) => (
+   
             <StyledPlaylistitems>
-            <PlaylistItem /> 
+                {videos.map(video => (
+                    <PlaylistItem
+                    key={video.id}
+                    video={video}
+                    active={video.id === active.id ? true : false}
+                    played={video.played}
+                    />
+                ))}
+            
             </StyledPlaylistitems>
          
-        </div>
-    )
-}
 
-export default PlayListItems;
+         )
+
+export default Playlistitems;
