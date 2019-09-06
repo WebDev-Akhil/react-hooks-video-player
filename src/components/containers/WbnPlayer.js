@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider} from 'styled-components';
 import Video from '../Video';
 import Playlist from '../containers/Playlist';
@@ -24,8 +24,18 @@ const themeLight = {
     color: "#353535",
 
 }
-const WbnPlayer = props => {
+const WbnPlayer = ({ match, history, location}) => {
    
+    const videos = JSON.parse(document.querySelector('[name="videos"]').value);
+
+    const [state, setState] = useState({
+        videos: videos.playlist,
+        activeVideo: videos.playlist[0],
+        nightMode: true,
+        playlistId: videos.playlistId,
+        autoplay: false,
+    
+    });
 const nightModeCallback = () => {
 
 }  
